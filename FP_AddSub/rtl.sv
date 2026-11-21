@@ -48,8 +48,8 @@ module fp_addsub (
             end else if (ey == 8'hff) begin
                 answer = {sy, 8'hff, 23'b0};
             end else begin
-                expx = ex == 0 ? 1 : int'(ex);
-                expy = ey == 0 ? 1 : int'(ey);
+                expx = ex == 0 ? 1 : ex;
+                expy = ey == 0 ? 1 : ey;
                 mx = {ex != 0, fx, 3'b000};
                 my = {ey != 0, fy, 3'b000};
                 if (expx > expy || (expx == expy && mx >= my)) begin
